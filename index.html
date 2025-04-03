@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Coaching Intake Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Financial Coaching Intake Form</h2>
+    <p>Welcome! Fill out this form so we can tailor the session to your needs.</p>
+    
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age">Age Range:</label>
+        <select id="age" name="age">
+            <option value="18-25">18-25</option>
+            <option value="26-35">26-35</option>
+            <option value="36-45">36-45</option>
+            <option value="46-55">46-55</option>
+            <option value="56+">56+</option>
+        </select>
+
+        <label>What are you looking to get out of this session?</label>
+        <input type="checkbox" name="goals" value="Habits"> Building better financial habits<br>
+        <input type="checkbox" name="goals" value="Education"> Gaining financial education<br>
+        <input type="checkbox" name="goals" value="Plan"> Creating an investment plan<br>
+        <input type="checkbox" name="goals" value="Grow Money"> Growing a specific amount in 5 years<br>
+        <input type="text" name="goals_other" placeholder="Other (optional)">
+
+        <label>Do you currently have investments?</label>
+        <select name="investments">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>What is your primary financial goal?</label>
+        <input type="text" name="primary_goal">
+
+        <label>Timeline:</label>
+        <input type="text" name="timeline_now" placeholder="Now">
+        <input type="text" name="timeline_5" placeholder="In 5 years">
+        <input type="text" name="timeline_20" placeholder="In 20 years">
+
+        <label>Do you know your annual spending?</label>
+        <select name="annual_spending">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>Do you have outstanding debt?</label>
+        <select name="debt">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        <input type="text" name="debt_details" placeholder="If yes, what kind? (e.g., student loans, mortgage)">
+
+        <label>Do you have special financial needs?</label>
+        <textarea name="special_needs" rows="3"></textarea>
+
+        <label>How familiar are you with asset allocation?</label>
+        <select name="asset_allocation">
+            <option value="Never heard of it">Never heard of it</option>
+            <option value="Somewhat familiar">Somewhat familiar</option>
+            <option value="Comfortable with it">Comfortable with it</option>
+            <option value="Very knowledgeable">Very knowledgeable</option>
+        </select>
+
+        <label>Do you know how much you need for retirement or financial independence?</label>
+        <select name="retirement_knowledge">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>Would you be interested in: (Check all that apply)</label>
+        <input type="checkbox" name="next_steps" value="Review allocations"> Reviewing your asset allocations<br>
+        <input type="checkbox" name="next_steps" value="Robo-advising"> Using a robo-advisor like Vanguard<br>
+        <input type="checkbox" name="next_steps" value="New accounts"> Setting up new investment accounts<br>
+        <input type="checkbox" name="next_steps" value="Projections"> Running projections<br>
+
+        <label>Additional Notes:</label>
+        <textarea name="notes" rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
